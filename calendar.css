@@ -1,0 +1,355 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    padding-top: 15px;
+}
+
+.calendar {
+    height: 580px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #222222;
+}
+
+#header {
+    height: 50px;
+    width: 100%;
+    background-color: #ec3642;
+}
+
+#date {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    color: #444444;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 18px;
+}
+
+#datetext {
+    height: 100%;
+    margin-left: 10%;
+    
+    /* Internet Explorer 10 */
+    display:-ms-flexbox;
+    -ms-flex-pack:left;
+    -ms-flex-align:center;
+
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-pack:left;
+    -moz-box-align:center;
+
+    /* Safari, Opera, and Chrome */
+    display:-webkit-box;
+    -webkit-box-pack:left;
+    -webkit-box-align:center;
+}
+
+#today {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    top: -40px;
+    color: white;
+}
+
+#todaybutton {
+    position: absolute;
+    background-color: #ec3642;
+    border: solid #222222 1px;
+    border-radius: 3px;
+    padding: 2px 4px 2px 4px;
+    color: #222222;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 10px;
+    margin-top: 7px;
+    right: 10px;
+    outline: none;
+}
+
+.datelist {
+    height: 90px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    background-color: #222222;
+    position: relative;
+}
+
+.w3-button{
+    border:none;
+    display:inline-block;
+    padding:37px 8px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+    font-size: 12px;
+}
+
+.w3-display-left{
+    position:absolute;
+    top:50%;
+    left:0%;
+    transform:translate(0%,-50%);
+    -ms-transform:translate(-0%,-50%);
+}
+
+.w3-display-right{
+    position:absolute;
+    top:50%;
+    right:0%;
+    transform:translate(0%,-50%);
+    -ms-transform:translate(0%,-50%);
+}
+
+.w3-black {
+    color: rgba(164, 164, 164, 0.6)!important;
+    background-color:#222222!important;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+}
+
+.w3-black:hover {
+    color: rgba(164, 164, 164, 1)!important;
+    transition-timing-function: ease-in-out;
+}
+
+.datelist #datelist {
+    height: 100%;
+    margin-left: 22px;
+    margin-right: 22px;
+}
+
+#datelist .date {
+    background-color: #ec3642;
+    height: 100%;
+    width: 14%;
+    float: left;
+    border-left: solid #222222 1px;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+}
+
+#datelist .notcurrentdate:hover {
+    background-color: #e0333f;
+    transition-timing-function: ease-in-out;
+}
+
+.date .week {
+    width: 100%;
+    height: 25%;
+    font-size: 15px;
+    color: white;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 7px;
+}
+
+.date .day {
+    width: 100%;
+    height: 27.5%;
+    font-size: 15px;
+    color: white;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+.date .circle {
+    width: 100%;
+    height: 25%;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.date .indicator {
+    position: relative;
+    height: 4%;
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+}
+
+.date .activeIndicator {
+    background-color: white;
+    transition-timing-function: ease-in-out;
+}
+
+#datelist .selectedDate {
+    background-color: #444444;
+}
+
+.activeCircle {
+    background-color: rgb(21,143,90);
+    cursor:pointer;
+    height:4px;
+    width:4px;
+    border: solid rgb(21,143,90) 1px;
+    border-radius:50%;
+    display:inline-block; 
+}
+
+.activeCircle2 {
+    background-color: rgb(21,143,90);
+    cursor:pointer;
+    height:5px;
+    width:5px;
+    border: solid rgb(21,143,90) 1px;
+    border-radius:50%;
+    display:inline-block; 
+}
+
+.agenda {
+    background-color: #ec3642;
+    margin-left: 22px;
+    margin-right: 22px;
+    height: 370px;
+    margin-top: 15px;
+    padding: 10px;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    line-height: 20px;
+}
+
+.titleView:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.agenda hr {
+    color: #44444450;
+    background-color: #44444450;
+    border-width:0;
+    height: 1px;
+}
+
+.agenda .agendabutton {
+    height: 19px;
+    width: 40px;
+    margin-left: 10px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid white 1px;
+    border-radius: 4px;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.agenda button:hover {
+    cursor: pointer
+}
+
+.detail {
+    display: none;
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    top: 0;
+    width: 402px; /* Full width */
+    height: 100%; /* Full height */
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #222222;
+    margin: auto;
+    padding: 0;
+    margin-top: 95px;
+    height: 495px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;    
+    width: 90%;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 140%;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.descspan {
+    position: relative;
+    width: 50px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
